@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-1b(p6c@fldbghfcfskg2%#(a^8g)(&9n)0*gjwbzngyg0vig4!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -88,12 +88,9 @@ WSGI_APPLICATION = 'tubers.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'tubers',
-        'USER': 'postgres',
-        'PASSWORD':'farman',
-        'HOST':'localhost',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+
     }
 }
 
